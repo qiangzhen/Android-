@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Service</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/276742; Windows/10.0.10240 (Win64);"/>
+  <meta name="content-class" content="maxiang"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="417"/>
+<h1>Service</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>创建时间：</b></td><td><i>2015/9/20 20:27</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div><span lang="v2" style="color: #2c3f51; font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif; line-height: 1.6;"><del style="position:relative;display:block"><a href="http://maxiang.info/#/?provider=evernote&amp;guid=7768569e-691b-4e97-a577-cf87a7e94ac2&amp;notebook=Android%E7%AC%94%E8%AE%B0" style="position: absolute;color: #FFF;text-decoration: none;font-size: 12px;height: 25px;border-radius: 0;margin-top: -20px;right: 15px;background: rgba(0, 0, 0, 0);border-left: 10px solid #BB3A34;border-right: 10px solid #BB3A34;border-bottom: 5px solid rgba(0, 0, 0, 0);width: 0;text-indent:-100000px;">Edit</a></del><div style="color: #2c3f51; font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif; line-height: 1.6;">
+                        <div style="line-height: 1.6;"></div>
+                    <div style="line-height: 1.6;">
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"></p></div><div style="line-height: 1.6;">
+
+<h1 style="font-size: 2.6em; margin: 1.2em 0 .6em 0; font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; text-align: start;">Service</h1>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">Service时安卓四大组件之一，它没有用户界面，在后台进行处理，生命周期较长。</p>
+
+</div><div style="line-height: 1.6;">
+
+<h2 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 2.15em; margin: 1.2em 0 .6em 0; text-align: start;">Service有两中状态</h2>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;">启动的</strong> <br/>
+    startService（）启动的服务，一旦启动就在后台运行 <br/>
+声明周期</p>
+
+<pre style="word-break: break-word; font-family: 'Source Code Pro',monospace; white-space: pre-wrap; display: block; background-color: rgba(102,128,153,0.05); color: #333; word-wrap: break-word; font-size: .9em; background: #f6f6f6; line-height: 1.6; margin: 0 0 1.1em; padding: 2px; border: 0; border-radius: 5px; text-align: start;"><code style="font-family: 'Source Code Pro',monospace; font-size: inherit; background-color: transparent; white-space: pre-wrap; border-radius: 0; color: #f8f8f2; display: block; background: #23241f; padding: 18px 28px;">onCreate（）<span style="line-height: 1.6; color: #f92672;"><span style="line-height: 1.6; color: #f8f8f2;">(只在创建de时候调用一次)</span>-&gt;</span>onStartCommand<span style="line-height: 1.6; color: #f92672;"><span style="line-height: 1.6; color: #f8f8f2;">()</span>（服务开启后，可多次调用）-&gt;</span>Service running-&gt;onDestroy<span style="line-height: 1.6; color: #f92672;"><span style="line-height: 1.6; color: #f8f8f2;">()</span>-&gt;</span>service shutdown<br/><br/></code></pre>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;">绑定的</strong></p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">bindService（）启动 </p>
+
+<pre style="word-break: break-word; font-family: 'Source Code Pro',monospace; white-space: pre-wrap; display: block; background-color: rgba(102,128,153,0.05); color: #333; word-wrap: break-word; font-size: .9em; background: #f6f6f6; line-height: 1.6; margin: 0 0 1.1em; padding: 2px; border: 0; border-radius: 5px; text-align: start;"><code style="font-family: 'Source Code Pro',monospace; font-size: inherit; background-color: transparent; white-space: pre-wrap; border-radius: 0; color: #f8f8f2; display: block; background: #23241f; padding: 18px 28px;">onCreate<span style="line-height: 1.6; color: #ae81ff;">()</span>-&gt;onBind<span style="line-height: 1.6; color: #ae81ff;">()</span>-clients are bound <span style="line-height: 1.6; color: #f92672;">to</span> service-&gt;onUnbind-&gt;onDestroy<span style="line-height: 1.6; color: #ae81ff;">()</span>-?service shutdown<br/><br/></code></pre></div><div style="line-height: 1.6;">
+
+<h2 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 2.15em; margin: 1.2em 0 .6em 0; text-align: start;">IntentService</h2>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">IntentService使用队列的方式将请求的Intent加入队列，然后开启一个worker thread(线程)来处理队列中的Intent，对于异步的startService请求，IntentService会处理完成一个之后再处理第二个，每一个请求都会在一个单独的worker thread中处理，不会阻塞应用程序的主线程，这里就给我们提供了一个思路，如果有耗时的操作与其在Service里面开启新线程还不如使用IntentService来处理耗时操作。而在一般的继承Service里面如果要进行耗时操作就必须另开线程，但是使用IntentService就可以直接在里面进行耗时操作，因为默认实现了一个worker thread。对于异步的startService请求，IntentService会处理完成一个之后再处理第二个。</p>
+
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; margin-top: 21px; margin-bottom: 21px; border: 0; border-top: 1px solid rgba(102,128,153,0.1); margin: 2em 0; line-height: 1.6;"/></div><div style="line-height: 1.6;"></div></div><center style="display:none">@%28Android%u7B14%u8BB0%29%5Bservice%5D%0A%0A%23%20Service%0A%0AService%u65F6%u5B89%u5353%u56DB%u5927%u7EC4%u4EF6%u4E4B%u4E00%uFF0C%u5B83%u6CA1%u6709%u7528%u6237%u754C%u9762%uFF0C%u5728%u540E%u53F0%u8FDB%u884C%u5904%u7406%uFF0C%u751F%u547D%u5468%u671F%u8F83%u957F%u3002%0A%0A%23%23Service%u6709%u4E24%u4E2D%u72B6%u6001%0A**%u542F%u52A8%u7684**%0A%09startService%uFF08%uFF09%u542F%u52A8%u7684%u670D%u52A1%uFF0C%u4E00%u65E6%u542F%u52A8%u5C31%u5728%u540E%u53F0%u8FD0%u884C%0A%u58F0%u660E%u5468%u671F%0A%0A%20%20%20%20onCreate%uFF08%uFF09%28%u53EA%u5728%u521B%u5EFAde%u65F6%u5019%u8C03%u7528%u4E00%u6B21%29-%3EonStartCommand%28%29%uFF08%u670D%u52A1%u5F00%u542F%u540E%uFF0C%u53EF%u591A%u6B21%u8C03%u7528%uFF09-%3EService%20running-%3EonDestroy%28%29-%3Eservice%20shutdown%0A%0A**%u7ED1%u5B9A%u7684**%0A%0AbindService%uFF08%uFF09%u542F%u52A8%20%0A%0A%20%20%20%20onCreate%28%29-%3EonBind%28%29-clients%20are%20bound%20to%20service-%3EonUnbind-%3EonDestroy%28%29-%3Fservice%20shutdown%0A%0A%0A%23%23%20IntentService%0A%0AIntentService%u4F7F%u7528%u961F%u5217%u7684%u65B9%u5F0F%u5C06%u8BF7%u6C42%u7684Intent%u52A0%u5165%u961F%u5217%uFF0C%u7136%u540E%u5F00%u542F%u4E00%u4E2Aworker%20thread%28%u7EBF%u7A0B%29%u6765%u5904%u7406%u961F%u5217%u4E2D%u7684Intent%uFF0C%u5BF9%u4E8E%u5F02%u6B65%u7684startService%u8BF7%u6C42%uFF0CIntentService%u4F1A%u5904%u7406%u5B8C%u6210%u4E00%u4E2A%u4E4B%u540E%u518D%u5904%u7406%u7B2C%u4E8C%u4E2A%uFF0C%u6BCF%u4E00%u4E2A%u8BF7%u6C42%u90FD%u4F1A%u5728%u4E00%u4E2A%u5355%u72EC%u7684worker%20thread%u4E2D%u5904%u7406%uFF0C%u4E0D%u4F1A%u963B%u585E%u5E94%u7528%u7A0B%u5E8F%u7684%u4E3B%u7EBF%u7A0B%uFF0C%u8FD9%u91CC%u5C31%u7ED9%u6211%u4EEC%u63D0%u4F9B%u4E86%u4E00%u4E2A%u601D%u8DEF%uFF0C%u5982%u679C%u6709%u8017%u65F6%u7684%u64CD%u4F5C%u4E0E%u5176%u5728Service%u91CC%u9762%u5F00%u542F%u65B0%u7EBF%u7A0B%u8FD8%u4E0D%u5982%u4F7F%u7528IntentService%u6765%u5904%u7406%u8017%u65F6%u64CD%u4F5C%u3002%u800C%u5728%u4E00%u822C%u7684%u7EE7%u627FService%u91CC%u9762%u5982%u679C%u8981%u8FDB%u884C%u8017%u65F6%u64CD%u4F5C%u5C31%u5FC5%u987B%u53E6%u5F00%u7EBF%u7A0B%uFF0C%u4F46%u662F%u4F7F%u7528IntentService%u5C31%u53EF%u4EE5%u76F4%u63A5%u5728%u91CC%u9762%u8FDB%u884C%u8017%u65F6%u64CD%u4F5C%uFF0C%u56E0%u4E3A%u9ED8%u8BA4%u5B9E%u73B0%u4E86%u4E00%u4E2Aworker%20thread%u3002%u5BF9%u4E8E%u5F02%u6B65%u7684startService%u8BF7%u6C42%uFF0CIntentService%u4F1A%u5904%u7406%u5B8C%u6210%u4E00%u4E2A%u4E4B%u540E%u518D%u5904%u7406%u7B2C%u4E8C%u4E2A%u3002%0A%0A%0A****</center><br/></span>
+</div></body></html> 

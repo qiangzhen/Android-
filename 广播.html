@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>广播</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/276742; Windows/10.0.10240 (Win64);"/>
+  <meta name="content-class" content="maxiang"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="418"/>
+<h1>广播</h1>
+<div>
+<table bgcolor="#D4DDE5" border="0">
+<tr><td><b>创建时间：</b></td><td><i>2015/9/20 20:02</i></td></tr>
+</table>
+</div>
+<br/>
+
+<div><span lang="v2" style="color: #2c3f51; font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif; line-height: 1.6;"><del style="position:relative;display:block"><a href="http://maxiang.info/#/?provider=evernote&amp;guid=f98dafc7-d533-4032-ad65-54cef25a9612&amp;notebook=Android%E7%AC%94%E8%AE%B0" style="position: absolute;color: #FFF;text-decoration: none;font-size: 12px;height: 25px;border-radius: 0;margin-top: -20px;right: 15px;background: rgba(0, 0, 0, 0);border-left: 10px solid #BB3A34;border-right: 10px solid #BB3A34;border-bottom: 5px solid rgba(0, 0, 0, 0);width: 0;text-indent:-100000px;">Edit</a></del><div style="color: #2c3f51; font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif; line-height: 1.6;">
+                        <div style="line-height: 1.6;"></div>
+                    <div style="line-height: 1.6;">
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"></p>
+
+</div><div style="line-height: 1.6;">
+
+<h1 style="font-size: 2.6em; margin: 1.2em 0 .6em 0; font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; text-align: start;">广播</h1>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">使用了观察者模式 <br/>
+实现不同程序之间的数据共享，只要和广播的action相同的接收者都能收到广播</p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;">发送广播  某一个类重写broadcastreceiver中的onReceiv（）方法，进行具体的处理</strong></p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">广播分类：</p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;">标准广播 <br/>
+有序广播（广播在传递过程中可能被中断）</p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;">广播的两种注册方式</strong></p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;"><em style="line-height: 1.6;">* 程序中动态注册*</em></strong></p>
+
+<pre style="word-break: break-word; font-family: 'Source Code Pro',monospace; white-space: pre-wrap; display: block; background-color: rgba(102,128,153,0.05); color: #333; word-wrap: break-word; font-size: .9em; background: #f6f6f6; line-height: 1.6; margin: 0 0 1.1em; padding: 2px; border: 0; border-radius: 5px; text-align: start;"><code style="font-family: 'Source Code Pro',monospace; font-size: inherit; background-color: transparent; white-space: pre-wrap; border-radius: 0; color: #f8f8f2; display: block; background: #23241f; padding: 18px 28px;">    <span style="line-height: 1.6; color: #f92672;">receiver</span> 广播接收器<br/>    intentFilter  声明该接收器可以处理的action<br/>registerReceiver（receiver，intentFilter）<br/><br/></code></pre>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;"><em style="line-height: 1.6;">*xml中注册**</em></strong></p>
+
+<pre style="word-break: break-word; font-family: 'Source Code Pro',monospace; white-space: pre-wrap; display: block; background-color: rgba(102,128,153,0.05); color: #333; word-wrap: break-word; font-size: .9em; background: #f6f6f6; line-height: 1.6; margin: 0 0 1.1em; padding: 2px; border: 0; border-radius: 5px; text-align: start;"><code style="font-family: 'Source Code Pro',monospace; font-size: inherit; background-color: transparent; white-space: pre-wrap; border-radius: 0; color: #f8f8f2; display: block; background: #23241f; padding: 18px 28px;"><span style="line-height: 1.6; color: #f8f8f2;">&lt;<span style="line-height: 1.6; color: #f92672;">receiver</span> <span style="line-height: 1.6; color: #f92672;">android:name</span>=<span style="line-height: 1.6; color: #a6e22e;">&quot;com.qlf.broadCast.broadCastReceiveByXml&quot;</span>&gt;</span><br/><span style="line-height: 1.6; color: #f8f8f2;">&lt;<span style="line-height: 1.6; color: #f92672;">intent-filter</span>&gt;</span><br/>    <span style="line-height: 1.6; color: #f8f8f2;">&lt;<span style="line-height: 1.6; color: #f92672;">action</span> <span style="line-height: 1.6; color: #f92672;">android:name</span>=<span style="line-height: 1.6; color: #a6e22e;">&quot;com.qlf.broadCastFlag&quot;</span>&gt;</span><br/>    <span style="line-height: 1.6; color: #f8f8f2;">&lt;/<span style="line-height: 1.6; color: #f92672;">action</span>&gt;</span><br/><span style="line-height: 1.6; color: #f8f8f2;">&lt;/<span style="line-height: 1.6; color: #f92672;">intent-filter</span>&gt;</span><br/><br/></code></pre>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"></p>
+
+<p style="margin: 0 0 1.1em; line-height: 1.6;"><strong style="font-weight: bold; line-height: 1.6;">发送广播</strong></p>
+
+<pre style="word-break: break-word; font-family: 'Source Code Pro',monospace; white-space: pre-wrap; display: block; background-color: rgba(102,128,153,0.05); color: #333; word-wrap: break-word; font-size: .9em; background: #f6f6f6; line-height: 1.6; margin: 0 0 1.1em; padding: 2px; border: 0; border-radius: 5px; text-align: start;"><code style="font-family: 'Source Code Pro',monospace; font-size: inherit; background-color: transparent; white-space: pre-wrap; border-radius: 0; color: #f8f8f2; display: block; background: #23241f; padding: 18px 28px;">intent：包含一个action，和可能包含的数据，action用于找到处理该广播的广播接收器<br/>sendBroadcast（intent）<br/><br/></code></pre></div><div style="line-height: 1.6;"></div></div><center style="display:none">@%28Android%u7B14%u8BB0%29%5B%u81EA%u5DF1%u603B%u7ED3%u7684%5D%0A%0A%23%u5E7F%u64AD%0A%0A%u4F7F%u7528%u4E86%u89C2%u5BDF%u8005%u6A21%u5F0F%0A%u5B9E%u73B0%u4E0D%u540C%u7A0B%u5E8F%u4E4B%u95F4%u7684%u6570%u636E%u5171%u4EAB%uFF0C%u53EA%u8981%u548C%u5E7F%u64AD%u7684action%u76F8%u540C%u7684%u63A5%u6536%u8005%u90FD%u80FD%u6536%u5230%u5E7F%u64AD%0A%0A%0A%0A**%u53D1%u9001%u5E7F%u64AD%20%20%u67D0%u4E00%u4E2A%u7C7B%u91CD%u5199broadcastreceiver%u4E2D%u7684onReceiv%uFF08%uFF09%u65B9%u6CD5%uFF0C%u8FDB%u884C%u5177%u4F53%u7684%u5904%u7406**%0A%0A%0A%u5E7F%u64AD%u5206%u7C7B%uFF1A%0A%0A%u6807%u51C6%u5E7F%u64AD%0A%u6709%u5E8F%u5E7F%u64AD%uFF08%u5E7F%u64AD%u5728%u4F20%u9012%u8FC7%u7A0B%u4E2D%u53EF%u80FD%u88AB%u4E2D%u65AD%uFF09%0A%0A%0A**%u5E7F%u64AD%u7684%u4E24%u79CD%u6CE8%u518C%u65B9%u5F0F**%0A%0A****%20%u7A0B%u5E8F%u4E2D%u52A8%u6001%u6CE8%u518C****%0A%09%09%0A%09%09receiver%20%u5E7F%u64AD%u63A5%u6536%u5668%0A%09%09intentFilter%20%20%u58F0%u660E%u8BE5%u63A5%u6536%u5668%u53EF%u4EE5%u5904%u7406%u7684action%0A%20%20%20%20registerReceiver%uFF08receiver%uFF0CintentFilter%uFF09%0A%0A%0A%0A****xml%u4E2D%u6CE8%u518C*****%0A%0A%20%20%20%20%3Creceiver%20android%3Aname%3D%22com.qlf.broadCast.broadCastReceiveByXml%22%3E%0A%20%20%20%20%3Cintent-filter%3E%0A%20%20%20%20%20%20%20%20%3Caction%20android%3Aname%3D%22com.qlf.broadCastFlag%22%3E%0A%20%20%20%20%20%20%20%20%3C/action%3E%0A%20%20%20%20%3C/intent-filter%3E%0A%3C/receiver%3E%0A%0A**%u53D1%u9001%u5E7F%u64AD**%0A%0A%09intent%uFF1A%u5305%u542B%u4E00%u4E2Aaction%uFF0C%u548C%u53EF%u80FD%u5305%u542B%u7684%u6570%u636E%uFF0Caction%u7528%u4E8E%u627E%u5230%u5904%u7406%u8BE5%u5E7F%u64AD%u7684%u5E7F%u64AD%u63A5%u6536%u5668%0A%20%20%20%20sendBroadcast%uFF08intent%uFF09</center><br/></span>
+</div></body></html> 
